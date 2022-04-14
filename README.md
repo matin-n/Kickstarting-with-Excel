@@ -3,25 +3,25 @@
 ## Overview of Project
 
 ### Purpose
-This project's purpose is to analyze different Kickstarter campaigns and how they performed in relation to their launch dates and funding goals.
+This project examines different Kickstarter campaigns and how they performed concerning their launch dates and funding goals.
 
 ## Analysis and Challenges
 
 ### Analysis of Outcomes Based on Launch Date
 
-I created a pivot table based on the `Parent Category` and `Years` columns.  Within the pivot table, I filtered the `Parent Category` by `Theater` to analyze the theater category. From the pivot table, I created a dotted line chart to visualize the relationship between outcomes and launch month.
+I created a pivot table based on the `Parent Category` and `Years` columns. Then, I filtered the `Parent Category` by `Theater` within the pivot table to analyze the theater category. Finally, I created a dotted line chart from the pivot table to visualize the relationship between outcomes and launch month.
 
-To create the `Years` column, I used the `YEAR()` function to extract the year from the `Date Created Conversion` column and placed the data in a new column `Years`. Then, within the pivot table, I filtered the `Parent Category` by `Theater`  to analyze the theater category.
+To create the `Years` column, I used the `YEAR()` function to extract the year from the `Date Created Conversion` column and placed the data in a new column, `Years`. Then, within the pivot table, I filtered the `Parent Category` by `Theater`  to analyze the theater category.
 
-The line chart shows the number of successful, failed, or canceled projects by month. With the line chart visualization, we can see how each month impacted the fundraising campaign outcome:
+The line chart shows the number of successful, failed, or canceled projects by month. We can see how each month impacted the fundraising campaign outcome with the line chart visualization:
 
-![Analysis of Outcomes Based on Launch Date](https://raw.githubusercontent.com/matin-n/kickstarter-analysis/main/resources/Theater_Outcomes_vs_Launch.png)
+![Analysis of Outcomes Based on Launch Date](resources/Theater_Outcomes_vs_Launch.png)
 
-We can deduce that the month of May is the month with the most successful Kickstarter campaign. However, May, June, July, August, and October all had roughly the same number of failed campaigns launched.
+We can deduce that May is the month with the most successful Kickstarter campaign. However, May, June, July, August, and October also had roughly the same number of failed campaigns.
 
 ### Analysis of Outcomes Based on Goals
 
-I created another line chart to visualize the percentage of successful, failed, and canceled plays based on the funding goal amounts.
+Based on the funding goal amounts, I created another line chart to visualize the percentage of successful, failed, and canceled plays.
 
 First, I created a sheet labeled "Outcomes Based on Goals" with the following columns:
 
@@ -53,21 +53,21 @@ Next, I calculated the Total Projects by using the `SUM()` function on the range
 
 Finally, I created a line chart to visualize the relationship between the goal-amount ranges on the x-axis and the percentage of successful, failed, and canceled projects on the y-axis.
 
-![Analysis of Outcomes Based on Goals](https://raw.githubusercontent.com/matin-n/kickstarter-analysis/main/resources/Outcomes_vs_Goals.png)
+![Analysis of Outcomes Based on Goals](resources/Outcomes_vs_Goals.png)
 
-We can conclude that there is a relationship between the goal amount and the campaign's success or failure rate. We can deduce that the rate of projects being successful will decrease as the funding goal amount increases. However, there were a few that we were able to successfully launch with a higher budget in the range of $35,000 to $34,999 and $40,0000 to $44,999. The reasoning for this discrepancy is unclear as we are limited by the dataset. We could speculate that the projects with the higher goals could have had a higher demand and a better marketing campaign to gather more interest, but we cannot see this with our current dataset.
+We can conclude that there is a relationship between the goal amount and the campaign's success or failure rate. We can deduce that the rate of successful projects will decrease as the funding goal amount increases. However, a few projects successfully launched with a higher budget range between $35,000 to $34,999 and $40,0000 to $44,999. The reasoning for this discrepancy is unclear as the dataset limits us. We could speculate that the projects with the higher goals could have had a higher demand and a better marketing campaign to gather more interest, but we cannot see this with our current dataset.
 
 ### Challenges and Difficulties Encountered
-It has difficult to find a reason why the budget range of $35,000 to $45,999 had an increase in successful projects. The data is limited by the number of projects, and we can only speculate with outside factors that are not included in the dataset on why this range had an increase of successful campaigns.
+It is difficult to find why the budget range of $35,000 to $45,999 had an increase in successful projects. One limitation of the dataset is the total number of projects. Therefore, we can only speculate why this range had an increase of successful campaigns from external factors not included in the dataset.
 
 
 
 ## Results
 
-- We can deduce that the month of May is the month with the most successful Kickstarter campaign. However, May, June, July, August, and October all had roughly the same number of failed campaigns launched.
+- We can deduce that May is the month with the most successful Kickstarter campaign. However, May, June, July, August, and October had roughly the same number of failed campaigns launched.
 
-- We can conclude that there is a relationship between the goal amount and the campaign's success or failure rate. We can deduce that the rate of projects being successful will decrease as the funding goal amount increases. However, there were a few that we were able to successfully launch with a higher budget in the range of $35,000 to $34,999 and $40,0000 to $44,999. The reasoning for this discrepancy is unclear as we are limited by the dataset. We could speculate that the projects with the higher goals could have had a higher demand and a better marketing campaign to gather more interest, but we cannot see this with our current dataset.
+- We can conclude a relationship between the goal amount and the campaign's success or failure rate. We can deduce that the rate of successful projects will decrease as the funding goal amount increases. However, there were a few that we were able to successfully launch with a higher budget in the range of $35,000 to $34,999 and $40,0000 to $44,999. The reasoning for this discrepancy is unclear as the dataset limits us. We could speculate that the projects with the higher goals could have had a higher demand and a better marketing campaign to gather more interest, but we cannot see this with our current dataset.
 
-- A limitation of this dataset is that we do not have marketing metrics. Therefore, a project may have had a larger marketing budget to increase the amount of sign-up backers for the Kickstarter. Another limitation is that the data does not include detailed information on the donation statistics. We only have access to the average donation. We do not have access to the data of the individual person that donated. It would be interesting to conduct on factors such as how much each person contributed, gender, or age.
+- A limitation of this dataset is that we do not have marketing metrics. Therefore, a project may have had a larger marketing budget to increase the amount of sign-up backers for the Kickstarter. Another limitation is that the data does not include detailed information on the donation statistics. We only have access to the average donation. We do not have access to the individual person's data that donated. It would be interesting to investigate how much each person contributed, gender, or age.
 
-- A possible graph that we could create could be a line chart on the outcome of the project based on average donation.
+- A possible graph that we could create could be a line chart on the project's outcome based on average donation.
